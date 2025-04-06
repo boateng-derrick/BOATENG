@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compactible" content="IE-edge">
+    <meta name="viewport" content="widthdevice-width,initial-scale=1.0">
+    <title>DERRO'S AUTO MOBILE</title>    
+    <link rel="stylesheet" href="boateng derrick.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <form action="">
+            <h1>login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+            </div>
+            <div class="input-box">
+                <input type="password" 
+                placeholder="password" required>
+            </div>
+
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#">Forgot password</a>
+            </div>
+
+            <button type="submit" class="btn">
+                <a href="login.html">LOGIN</a>                       
+            </button>
+
+            <div class="register-link">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector("form");
+            const usernameInput = form.querySelector('input[name="username"]');
+            const passwordInput = form.querySelector('input[name="password"]');
+            const rememberMeCheckbox = form.querySelector('input[type="checkbox"]');
+    
+            form.addEventListener("submit", function (e) {
+                const username = usernameInput.value.trim();
+                const password = passwordInput.value.trim();
+    
+                // Basic validation
+                if (username === "" || password === "") {
+                    alert("Please fill in both fields.");
+                    e.preventDefault(); // Stop form from submitting
+                    return;
+                }
+    
+                // Fake credentials check (for demonstration)
+                if (username !== "admin" || password !== "password123") {
+                    alert("Invalid username or password.");
+                    e.preventDefault();
+                    return;
+                }
+    
+                // Handle "Remember me"
+                if (rememberMeCheckbox.checked) {
+                    console.log("User wants to be remembered.");
+                    // You could use localStorage here
+                    // localStorage.setItem("rememberMe", "true");
+                } else {
+                    console.log("User does not want to be remembered.");
+                    // localStorage.removeItem("rememberMe");
+                }
+    
+                // Allow form to submit if all checks pass
+                alert("Login successful!");
+            });
+        });
+    </script>
+    
+
+</body>
+</html>
+    
+
