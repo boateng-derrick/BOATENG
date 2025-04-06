@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Sample Webpage</title>
+    <link rel="stylesheet" href="sport cars.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h2>DerRo's AUTO MOBILE </h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="OFF ROAD.HTML">OFF ROAD VEHICLES</a></li>
+
+            <li><a href="SUV.HTML">SUV</a></li>
+
+            <li><a href="spot cars.html">SPORT CARS</a></li>
+
+            <li><a href="v8 cylinder.html">V8 CYLYNDERS</a></li>
+
+            <li><a href="v16.html">V16 CYLINDERS</a></li>
+
+            <li><a href="#facebook">ELECTRIC CARS</a></li>
+
+            <li><a href="#help">help</a></li>
+        </ul>
+    </nav>
+
+    <!-- Search Bar -->
+    <section>
+        <form>
+            <input type="text" placeholder="Search..." name="search">
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <!-- Main Content -->
+    <article>
+        <h2>WE WERE MADE FOR SPEED</h2>
+        <p>GET YOUR DREAM CAR!!!!.</p>
+    </article>
+
+    <!-- Section with Images -->
+    <section>
+        <h1>FIRST STEP TO YOUR DREAM CAR</h1>
+        <div class="image-container">
+            <figure>
+                <img src="C:\Users\DERRO\Desktop\boat\bugati chivron.jpg" alt="Bugatti Chiron">
+                <figcaption>Bugatti Chiron</figcaption>
+            </figure>
+            <figure>
+                <img src="C:\Users\DERRO\Desktop\boat\audi.jpg" alt="Audi R8">
+                <figcaption>Audi R8</figcaption>
+            </figure>
+            <figure>
+                <img src="C:\Users\DERRO\Desktop\boat\benz 2.jpg" alt="Mercedes-Benz">
+                <figcaption>Mercedes-Benz</figcaption>
+            </figure>
+            <figure>
+                <img src="C:\Users\DERRO\Desktop\boat\bmw2.jpg" alt="BMW M4">
+                <figcaption>BMW M4</figcaption>
+            </figure>
+            <figure>
+                <img src="C:\Users\DERRO\Desktop\boat\off 6.jpg" alt="Lamborghini Aventador">
+                <figcaption>Lamborghini Aventador</figcaption>
+            </figure>
+            <figure>
+                <img src="C:\Users\DERRO\Desktop\boat\dodge 2.jpg" alt="Ferrari LaFerrari">
+                <figcaption>Ferrari LaFerrari</figcaption>
+            </figure>
+            <figure>
+                <img src="C:\Users\DERRO\Desktop\boat\off 7.jpg" alt="Nissan GT-R">
+                <figcaption>Nissan GT-R</figcaption>
+            </figure>
+            <figure>
+                <img src="C:\Users\DERRO\Desktop\boat\off road 5.jpg" alt="Porsche 911">
+                <figcaption>Porsche 911</figcaption>
+            </figure>
+            <figure>
+                <img src="C:\Users\DERRO\Desktop\boat\off road 3.jpg" alt="Jeep Wrangler">
+                <figcaption>Jeep Wrangler</figcaption>
+            </figure>
+            <figure>
+                <img src="C:\Users\DERRO\Desktop\boat\2021 Mercedes-AMG GLE53 Coupe electrifies (1).jpg" alt="Ford Mustang">
+                <figcaption>Ford Mustang</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Contact Information and Form -->
+    <section>
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p><strong>Address:</strong> 123 Dream Car Street, Auto City, AC 45678</p>
+            <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+            <p><strong>Email:</strong> support@derroautomobile.com</p>
+        </div>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="30" placeholder="Your Message"></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script>
+        // 1. Show a welcome alert on page load
+        window.onload = function () {
+            alert("Welcome to DerRo's AUTO MOBILE 🚗🔥");
+        };
+    
+        // 2. Handle search form submission
+        const form = document.querySelector("form");
+        form.addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent page reload
+            const query = form.search.value.trim();
+            if (query) {
+                alert("You searched for: " + query);
+                // Optionally redirect to a search results page
+                // window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+            } else {
+                alert("Please enter a search term.");
+            }
+        });
+    
+        // 3. Log navigation clicks (for demo or analytics)
+        const navLinks = document.querySelectorAll("nav a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", (e) => {
+                console.log(`Navigating to: ${link.textContent}`);
+            });
+        });
+    
+        // 4. Optional: Add a simple hover effect on images using JS
+        const images = document.querySelectorAll("section img");
+        images.forEach(img => {
+            img.addEventListener("mouseover", () => {
+                img.style.transform = "scale(1.05)";
+                img.style.transition = "transform 0.3s ease";
+            });
+            img.addEventListener("mouseout", () => {
+                img.style.transform = "scale(1)";
+            });
+        });
+    </script>
+    
+
+</body>
+</html>

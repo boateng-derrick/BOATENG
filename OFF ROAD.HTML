@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DerRo's AUTO MOBILE</title>
+    <link rel="stylesheet" href="project1.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h2>DerRo's AUTO MOBILE</h2>
+    </header>
+
+    <!-- Background Image -->
+    <style>
+        body {
+            background-image: url(bmw.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="OFF ROAD.HTML">OFF ROAD VEHICLES</a></li>
+            <li><a href="SUV.HTML">SUV</a></li>
+            <li><a href="sport cars.html">SPORT CARS</a></li>
+            <li><a href="v8 cylinder.html">V8 CYLINDERS</a></li>
+            <li><a href="v16.html">V16 CYLINDERS</a></li>
+            <li><a href="#facebook">ELECTRIC CARS</a></li>
+            <li><a href="#help">Help</a></li>
+        </ul>
+    </nav>
+
+    <!-- Search Bar -->
+    <section>
+        <form>
+            <input type="text" placeholder="Search..." name="search" aria-label="Search">
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <!-- Main Content -->
+    <article>
+        <h2>WE WERE MADE FOR SPEED</h2>
+        <p>GET YOUR DREAM CAR!!!!</p>
+    </article>
+
+    <!-- Section with Images -->
+    <section>
+        <h1>FIRST STEP TO YOUR DREAM CAR</h1>
+        <div class="image-container">
+            <div class="image-box">
+                <img src="C:\Users\DERRO\Desktop\boat\off road1.jpg"  alt="OFF ROAD CARS">
+                <p>OFF ROAD CARS</p>
+            </div>
+            <div class="image-box">
+                <img src="C:\Users\DERRO\Desktop\boat\escalid cadillac.jpg" alt="SUV CARS">
+                <p>SUV CARS</p>
+            </div>
+            <div class="image-box">
+                <img src="C:\Users\DERRO\Desktop\boat\bugati chivron.jpg" alt="SPORT CARS">
+                <p>SPORT CARS</p>
+            </div>
+            <div class="image-box">
+                <img src="C:\Users\DERRO\Desktop\boat\tesla cyber track.jpg" alt="V8 CYLINDERS">
+                <p>V8 CYLINDERS</p>
+            </div>
+            <div class="image-box">
+                <img src="C:\Users\DERRO\Desktop\boat\lambogini.jpg" alt="V16 CYLINDERS">
+                <p>V16 CYLINDERS</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table -->
+    <section>
+        <h1>AVAILABLE CARS</h1>
+        <table border="1">
+            <tr>
+                <th>TYPES</th>
+            </tr>
+            <tr>
+                <td>AUDI</td>
+            </tr>
+            <tr>
+                <td>TOYOTA</td>
+            </tr>
+            <tr>
+                <td>ROLLS ROYCE</td>
+            </tr>
+            <tr>
+                <td>LAMBORGHINI</td>
+            </tr>
+            <tr>
+                <td>RANGE ROVER</td>
+            </tr>
+            <tr>
+                <td>CADILLAC</td>
+            </tr>
+            <tr>
+                <td>BMW</td>
+            </tr>
+            <tr>
+                <td>NISSAN</td>
+            </tr>
+            <tr>
+                <td>BUGATTI</td>
+            </tr>
+            <tr>
+                <td>FORD</td>
+            </tr>
+            <tr>
+                <td>PORSCHE</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Unordered List -->
+    <section>
+        <h2>Our Features</h2>
+        <ul>
+            <li>THE BEST CARS IN TOWN!!!</li>
+            <li>WE DO INTERNATIONAL SHIPPING!!!</li>
+            <li>MAKE YOUR ORDER NOW!!!</li>
+        </ul>
+    </section>
+
+    <!-- Aside Section -->
+    <aside>
+        <h3>Latest News</h3>
+        <p>WE DO DELIVERY NATIONWIDE!!!</p>
+    </aside>
+
+    <!-- Contact Form -->
+    <section>
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Embedded Video -->
+    <section>
+        <h2>Watch Our Video</h2>
+        <video width="560" height="315" controls>
+            <source src="C:\Users\DERRO\Desktop\boat\Download (1).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 DerRo's AUTO MOBILE. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Handle Search
+            const searchForm = document.querySelector("form");
+            searchForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const query = e.target.search.value.trim();
+                if (query) {
+                    alert("You searched for: " + query);
+                } else {
+                    alert("Please enter a search term.");
+                }
+            });
+
+            // Contact form validation
+            const contactForm = document.querySelectorAll("form")[1];
+            contactForm.addEventListener("submit", function (e) {
+                const name = contactForm.name.value.trim();
+                const email = contactForm.email.value.trim();
+                const message = contactForm.message.value.trim();
+
+                if (!name || !email || !message) {
+                    alert("Please fill in all contact fields.");
+                    e.preventDefault();
+                } else {
+                    alert("Thanks for contacting us, " + name + "!");
+                }
+            });
+
+            // Log image clicks
+            const imageBoxes = document.querySelectorAll(".image-box img");
+            imageBoxes.forEach(img => {
+                img.addEventListener("click", function () {
+                    alert("You clicked on: " + img.alt);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
